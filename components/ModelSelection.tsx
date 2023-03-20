@@ -23,7 +23,7 @@ const ModelSelection = () => {
         isLoading={isLoading}
         placeholder={model}
         onChange={(e:any)=>setModel(e.value)}
-      options={models.modelOptions
+      options={models?.modelOptions
 } />
     </div>
   )

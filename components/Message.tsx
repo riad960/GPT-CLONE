@@ -5,7 +5,7 @@ type Props={
 
 }
 const Message = ({message}:Props) => {
-    console.log(message)
+    
 const isGPT = message.user.name==="CHATGPT"
   return (
   <div className={`py-5  overflow-hidden ${isGPT && 'bg-gray-500'}`}>
