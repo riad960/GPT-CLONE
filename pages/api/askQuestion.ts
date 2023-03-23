@@ -33,7 +33,7 @@ export default async function handler(
         user: {
             _id:"CHATGPT",
             name:"CHATGPT",
-            avatar:"https://links.papareact.com/89k"
+            avatar:"https://i.ibb.co/wyFdHnV/bb.jpg"
         }
     }
     await adminDb.collection('users').doc(session?.user?.email).collection('chats').doc(chatId).collection('messages').add(messages)
