@@ -27,7 +27,7 @@ const [active,setActive]=useState(false)
 ${active ?'flex':'hidden'}
  flex-col h-screen  text-white  `}>
 
-<div className="grow">
+<div className="min-h-[80%]">
  {/* new chat button  */}
 <div className="">
 <NewChat/>
@@ -48,7 +48,7 @@ ${active ?'flex':'hidden'}
 </div>
 </div>
 {data &&(
-<div className="flex flex-col sm:flex-row  mx-auto hover:opacity-60 items-center justify-between cursor-pointer  w-full py-3   rounded px-5 bg-gray-400"
+<div className="flex   flex-col sm:flex-row  mx-auto hover:opacity-60 items-center justify-between cursor-pointer  w-full py-3   rounded px-5 bg-gray-400"
 onClick={()=>signOut()}
 >
 <button className="mr-4 my-2 text-sm font-medium text-slate-200">Sign Out </button>
@@ -98,41 +98,7 @@ className="h-8 w-8 rounded-full ring-2 ring-gray-400"/>
 )}
 </div>
 
-<div className={`p-2
-hidden md:flex
- flex-col h-screen  text-white  `}>
 
-<div className="grow">
- {/* new chat button  */}
-<div className="">
-<NewChat/>
-    {/* model selection  */}
-    <div className="hidden sm:inline">
-      <ModelSelection/>
-    </div>
-
-</div>
-{/* new chat button ends */}
-{/* map the chat rows  */}
-<div className="">
- {
-      chats?.docs.map(chat => (
-        <ChatRow key={chat.id} id={chat.id}/>
-       ))
- }
-</div>
-</div>
-{data &&(
-<div className="flex flex-col sm:flex-row  mx-auto hover:opacity-60 items-center justify-between cursor-pointer  w-full py-3   rounded px-5 bg-gray-700"
-onClick={()=>signOut()}
->
-<button className="mr-4 my-2 text-sm font-medium text-slate-200">Sign Out </button>
- <img src={data.user?.image!} alt=""
-className="h-8 w-8 rounded-full ring-2 ring-gray-400"/>
-
-</div>
-)}
-</div>
     </div>
   )
 }
