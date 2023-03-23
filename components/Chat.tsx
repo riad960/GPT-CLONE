@@ -16,7 +16,7 @@ const Chat = ({id}:Props) => {
   collection(db,"users",session?.user?.email!,'chats',id,'messages'),orderBy('createdAt','asc')
  ))
   return (
-    <div className="grow overflow-hidden">
+    <div className="grow overflow-y-auto">
       {
         messages?.empty && (
           <div className="">
