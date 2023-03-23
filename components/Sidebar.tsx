@@ -27,7 +27,7 @@ const [active,setActive]=useState(false)
 ${active ?'flex':'hidden'}
  flex-col h-screen  text-white  `}>
 
-<div className="min-h-[80%]">
+<div className="min-h-[70%]">
  {/* new chat button  */}
 <div className="">
 <NewChat/>
