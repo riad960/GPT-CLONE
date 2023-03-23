@@ -31,7 +31,7 @@ console.log('Hii')
 
       {!session ?<Login/>:(<div className="flex">
         {/* sidebar  */}
-     <div className=" overflow-y-auto min-h-screen md:min-w-[20rem] bg-gray-900">
+     <div className="max-w-xs overflow-y-auto min-h-screen md:min-w-[20rem] bg-gray-900">
      <Sidebar/>
      </div>
 <ClientPovider/>
